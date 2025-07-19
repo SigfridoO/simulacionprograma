@@ -55,12 +55,10 @@ class Reparto2:
         ax.clear()
 
         coords = self.coordenadas
-        # Dibujar nodos
         for i, punto in enumerate(coords):
             ax.plot(*punto, 'o', markersize=10)
             ax.text(punto[0]+0.3, punto[1]+0.3, f"N{i}", fontsize=10, color='black')
 
-        # Dibujar aristas óptimas
         for u, v, peso in self.aristas_optimas:
             p1, p2 = coords[u], coords[v]
             ax.plot([p1[0], p2[0]], [p1[1], p2[1]], color='blue', linewidth=2)
@@ -79,8 +77,6 @@ class Reparto2:
         for u, v, peso in self.aristas_optimas:
             print(f"N{u} <-> N{v} : {peso:.2f}")
         print(f"\nCosto total del reparto (distancia total): {self.costo_total:.2f}")
-
-
         
 def main():
     r = Reparto2(num_destinos=4, semilla=123)
