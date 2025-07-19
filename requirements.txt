@@ -1,0 +1,12 @@
+Pillow
+blessed
+numPy
+pandas
+matplotlib
+scipy
+PyQt6
+networkx
+
+qt_material
+qtawesome
+
